@@ -1,0 +1,60 @@
+html,body, div, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+body {
+    background: linear-gradient(to right, #aaa7a7,#c48888);
+}
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+    gap: 5px;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+
+    /* 
+        justify-content: 
+        align-items:
+
+        grid:
+            justify-content, align-content
+            justify-items, align-items
+    */
+}
+.calculator > button {
+    cursor: pointer;
+    font-size: 30px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.calculator > button:hover {
+    background-color: rgba(255,255,255,0.9);
+}
+.two {
+    grid-column: span 2;
+}
+.output {
+    grid-column: 1/-1;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .firstLine {
+    color: white;
+    font-size: 1.5rem;
+}
+.output .secondLine {
+    color: white;
+    font-size: 2.5rem;
+}
